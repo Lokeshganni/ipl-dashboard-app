@@ -1,6 +1,8 @@
 // Write your code here
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
+import MatchCard from '../MatchCard'
 import './index.css'
 
 class TeamMatches extends Component {
@@ -30,6 +32,7 @@ class TeamMatches extends Component {
       secondInnings: data.latest_match_details.second_innings,
       matchStatus: data.latest_match_details.match_status,
     }
+    console.log(latestMatchDetails)
 
     const recentMatches = data.recent_matches.map(each => ({
       umpires: each.umpires,
@@ -45,6 +48,7 @@ class TeamMatches extends Component {
       secondInnings: each.second_innings,
       matchStatus: each.match_status,
     }))
+    console.log(recentMatches)
     this.setState({
       matchList: recentMatches,
       isLoading: false,
@@ -54,12 +58,19 @@ class TeamMatches extends Component {
   }
 
   render() {
-    const {bannerImageUrl, matchDetails} = this.state
-    return (
+    const {matchList, isLoading, bannerImageUrl, matchDetails} = this.state
+    return isLoading ? (
+      <div data-testid="loader" className="loader">
+        <Loader type="Oval" color="red" height={50} width={50} />
+      </div>
+    ) : (
       <div className="team-matches-main-container">
         <img src={bannerImageUrl} alt="team banner" className="team-banner" />
         <p className="latest-matches-para">Latest Matches</p>
         <LatestMatch matchDetails={matchDetails} />
+        {matchList.map(each => (
+          <MatchCard details={each} key={each.id} />
+        ))}
       </div>
     )
   }

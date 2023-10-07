@@ -1,4 +1,10 @@
 /* Write your CSS here */
+
+.loader {
+  text-align: center;
+  margin-top: 50px;
+}
+
 .team-matches-main-container {
   background-size: cover;
   min-height: 100vh;
@@ -6,6 +12,12 @@
   flex-direction: column;
   padding: 3% 2%;
   font-family: 'Bree Serif';
+}
+
+@media screen and (min-width: 768px) {
+  .team-matches-main-container {
+    padding: 4% 5%;
+  }
 }
 
 .team-banner {

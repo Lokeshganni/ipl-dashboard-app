@@ -1,1 +1,137 @@
 /* Write your CSS here */
+.latest-match-main-container {
+  background-color: #1e293b;
+  background-size: cover;
+  min-height: 100%;
+  font-family: 'Bree Serif';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-main-container {
+    flex-direction: row;
+    padding: 10px 30px;
+  }
+}
+
+.latest-match-team-name-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+  min-height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-team-name-logo-container {
+    width: 70%;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+}
+
+.latest-match-team-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-team-name {
+    font-size: 32px;
+  }
+}
+
+.latest-match-date {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-date {
+    font-size: 24px;
+  }
+}
+
+.latest-match-heading {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-heading {
+    font-size: 18px;
+  }
+}
+
+.latest-match-para {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-para {
+    font-size: 16px;
+  }
+}
+
+/* .latest-match-name-and-date-container {
+  width: 80%;
+} */
+
+@media screen and (min-width: 768px) {
+  .latest-match-name-and-date-container {
+    width: 50%;
+  }
+}
+
+.latest-match-logo-container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-logo-container {
+    width: 50%;
+  }
+}
+
+.latest-match-logo {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-logo {
+    width: 80%;
+  }
+}
+
+.horizontal-rule {
+  width: 100%;
+  border: 1px solid #475569;
+}
+
+@media screen and (min-width: 768px) {
+  .horizontal-rule {
+    display: none;
+  }
+}
+
+.latest-match-innings-container {
+  width: 100%;
+  padding: 0 15px;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-innings-container {
+    width: 30%;
+    text-align: right;
+  }
+}
