@@ -1,0 +1,20 @@
+/* Write your CSS here */
+.team-matches-main-container {
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 2%;
+  font-family: 'Bree Serif';
+}
+
+.team-banner {
+  width: 100%;
+}
+
+.latest-matches-para {
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
